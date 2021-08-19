@@ -40,6 +40,7 @@
           <div class="row">
             {% for company in companies.all %}
               <div class="col-md-4">
+              <a href="{% url 'detail' company.id %}">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="{{ company.image.url }}">
                 <div class="card-body">
@@ -53,6 +54,7 @@
                   </div> -->
                 </div>
               </div>
+            </a>
             </div>
             {% endfor %}
           </div>
