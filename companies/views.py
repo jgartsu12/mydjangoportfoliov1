@@ -9,4 +9,4 @@ def homepage(request):
 
 def detail(request, company_id):
     company_detail = get_object_or_404(Company, pk=company_id)
-    return render(request, 'companies/home.html')
+    return render(request, 'companies/detail.html', {'company':company_detail})
