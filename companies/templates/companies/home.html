@@ -6,6 +6,7 @@
 
 {% endfor %}
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -37,6 +38,7 @@
             <a href="mailto:johncgartsu@gmail.com" class="btn btn-primary my-2">Email Me</a>
             <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
           </p>
+          <img src="{% static 'headshot.jpg' %}"></img>
         </div>
       </section>
 
