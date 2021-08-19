@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Company
 
 # Create your views here.
-def john(request):
-    return render(request, 'companies/home.html')
+def homepage(request):
+    companies = Company.objects
+    return render(request, 'companies/home.html', {'companies': companies})
