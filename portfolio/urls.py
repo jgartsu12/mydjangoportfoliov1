@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import johngartsu.views
 import companies.views
 import projects.views
 from django.conf import settings
@@ -22,9 +23,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', companies.views.homepage, name='home' ),
-    path('companies/<int:company_id>', companies.views.detail, name='detail'),
-    path('projects/', projects.views.projectspage, name='projects' ),
+    path('', johngartsu.views.homepage, name='home'),
+    path('companies/', companies.views.companypage, name='companies'),
+    path('companies/<int:company_id>', companies.views.companydetail, name='company-detail'),
+    path('projects/', projects.views.projectspage, name='projects'),
     path('projects/<int:project_id>', projects.views.projectdetail, name='project-detail'),
 ] 
 

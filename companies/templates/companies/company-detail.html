@@ -20,16 +20,15 @@
   </head>
 
   <body>
-
+<!-- add navbar? -->
     <main role="main">
-
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Company Detail</h1>
           <p class="lead text-muted">{{ company.summary }}</p>
           <img src="{{ company.image.url }}"></img>
           <p>
-            <a href="{% url 'home'%}" class="btn btn-primary my-2">Back</a>
+            <a href="{% url 'companypage'%}" class="btn btn-primary my-2">Back</a>
           </p>
         </div>
       </section>

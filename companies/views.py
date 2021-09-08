@@ -3,10 +3,10 @@ from .models import Company
 
 
 # Create your views here.
-def homepage(request):
+def companypage(request):
     companies = Company.objects
-    return render(request, 'companies/home.html', {'companies': companies})
+    return render(request, 'companies/companies.html', {'companies': companies})
 
-def detail(request, company_id):
+def companydetail(request, company_id):
     company_detail = get_object_or_404(Company, pk=company_id)
-    return render(request, 'companies/detail.html', {'company':company_detail})
+    return render(request, 'companies/company-detail.html', {'company':company_detail})
