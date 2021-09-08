@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>John Gartsu Portfolio</title>
+    <!-- <title>Projects</title> -->
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
@@ -25,13 +25,13 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">John Gartsu</h1>
-          <p class="lead text-muted">Junior Software Engineer</p>
-          <p>
+          <h1 class="jumbotron-heading">My Projects</h1>
+          <!-- <p class="lead text-muted">Junior Software Engineer</p> -->
+          <!-- <p>
             <a href="mailto:johncgartsu@gmail.com" class="btn btn-primary my-2">Email Me</a>
-            <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
-          </p>
-          <img src="{% static 'headshot.jpg' %}" height=200></img>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p> -->
+          <!-- <img src="{% static 'headshot.jpg' %}" height=200></img> -->
         </div>
       </section>
 
@@ -40,7 +40,7 @@
           <div class="row">
             {% for project in projects.all %}
               <div class="col-md-4">
-              <a href="{% url 'detail' project.id %}">
+              <a href="{% url 'project-detail' project.id %}">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="{{ project.image.url }}">
                 <div class="card-body">

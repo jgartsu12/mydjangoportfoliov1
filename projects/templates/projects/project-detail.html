@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>John Gartsu Portfolio</title>
+    <!-- <title>Project Details</title> -->
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
 
@@ -25,11 +25,11 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Company Detail</h1>
-          <p class="lead text-muted">{{ company.summary }}</p>
-          <img src="{{ company.image.url }}"></img>
+          <h1 class="jumbotron-heading">Project Detail</h1>
+          <p class="lead text-muted">{{ project.description }}</p>
+          <img src="{{ project.image.url }}"></img>
           <p>
-            <a href="{% url 'home'%}" class="btn btn-primary my-2">Back</a>
+            <a href="{% url 'projects'%}" class="btn btn-primary my-2">Back</a>
           </p>
         </div>
       </section>
